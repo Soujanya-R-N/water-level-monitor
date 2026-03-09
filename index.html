@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Water IoT Control Center</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1 class="title">Water Purifier System</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>PURITY (TDS)</h3>
+<p class="value" id="tds">0 PPM</p>
+</div>
+
+<div class="card">
+<h3>LEVEL</h3>
+<p class="value" id="level">---</p>
+</div>
+
+<div class="card">
+<h3>MOTOR</h3>
+<p class="motor" id="motor">OFF</p>
+<p class="small">Last ON: <span id="motorTime">--</span></p>
+</div>
+
+<div class="card">
+<h3>DRAIN VALVE</h3>
+<p class="valve" id="valve">CLOSED</p>
+<p class="small">Last OPEN: <span id="valveTime">--</span></p>
+</div>
+
+</div>
+
+<div class="controls">
+
+<h2>Manual Overrides</h2>
+
+<div class="buttons">
+
+<button class="green" onclick="motorON()">Motor ON</button>
+<button class="red" onclick="motorOFF()">Motor OFF</button>
+
+<button class="green" onclick="valveOPEN()">Valve OPEN</button>
+<button class="red" onclick="valveCLOSE()">Valve CLOSE</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
