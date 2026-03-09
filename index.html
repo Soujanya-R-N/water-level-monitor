@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Water IoT Control Center</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Water Purifier System</h1>
+
+<div class="status">
+Device: <span id="device">OFFLINE</span>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>PURITY (TDS)</h3>
+<p id="tds">0 PPM</p>
+<canvas id="tdsChart"></canvas>
+</div>
+
+<div class="card">
+<h3>TANK LEVEL</h3>
+
+<div class="tank">
+<div class="water" id="water"></div>
+</div>
+
+<p id="level">---</p>
+
+</div>
+
+<div class="card">
+<h3>MOTOR</h3>
+
+<p id="motor">OFF</p>
+
+<label class="switch">
+<input type="checkbox" id="motorToggle">
+<span class="slider"></span>
+</label>
+
+</div>
+
+<div class="card">
+<h3>DRAIN VALVE</h3>
+
+<p id="valve">CLOSED</p>
+
+<label class="switch">
+<input type="checkbox" id="valveToggle">
+<span class="slider"></span>
+</label>
+
+</div>
+
+</div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
